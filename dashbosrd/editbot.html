@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard Completo</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/dash.css" />
+    <style>
+      @media (max-width: 768px) {
+        /* A sidebar vai desaparecer completamente quando fechada */
+        .sidebar.closed {
+          display: none;
+        }
+
+        /* O botão de alternância deve ser visível e posicionado corretamente */
+        .toggle-btn {
+          display: block;
+          position: fixed;
+          top: 20px;
+          left: 20px;
+          z-index: 100;
+        }
+
+        /* Main content será ajustado para ocupar todo o espaço disponível */
+        .main-content {
+          margin-left: 0;
+          width: 98%;
+        }
+
+        /* Ajuste para quando a sidebar estiver aberta */
+        .sidebar {
+          display: block; /* Para aparecer quando aberta */
+        }
+      }
+      .form-div {
+        border: #11111100 1px solid;
+        border-radius: 5px;
+        padding: 20px;
+        background: rgb(18, 18, 18);
+        background: radial-gradient(
+          circle,
+          rgba(18, 18, 18, 0.6083683473389356) 0%,
+          rgba(17, 17, 17, 1) 81%
+        );
+        box-shadow: 0px 4px 8px rgb(0, 0, 0);
+      }
+      .form-div p {
+        margin: 20px 0;
+        font-weight: 100;
+      }
+      .form-div a {
+        color: aliceblue;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      input {
+        background-color: #252525;
+        border: none;
+        border-radius: 10px;
+        padding: 5px;
+        width: 100%;
+        margin-bottom: 10px;
+        margin-top: 10px;
+      }
+      input[type="file"] {
+        display: none;
+      }
+
+      /* Estilizar o botão */
+      .custom-file-upload {
+        margin: 15px 10px 5px;
+        background-color: #272727;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        display: inline-block;
+        transition: background 0.3s;
+      }
+
+      .custom-file-upload:hover {
+        background-color: #363636;
+      }
+
+      /* Estilizar o texto do arquivo selecionado */
+      #file-name {
+        display: block;
+        margin-top: 10px;
+        font-size: 14px;
+        color: #ddd;
+      }
+      textarea {
+        background-color: #272727;
+        border: none;
+        border-radius: 10px;
+        width: 100%;
+        padding: 5px;
+        height: 100px;
+      }
+      .submit-btn {
+        padding: 10px 25px;
+        border: none;
+        background-color: black;
+        color: aliceblue;
+        border-radius: 20px;
+        margin: 5px 0;
+      }
+      .submit-btn:hover {
+        background-color: #242424;
+        transition: 0.3s;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <!-- Sidebar -->
+      <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+      <nav class="sidebar" id="sidebar">
+        <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+        <h2 class="sidebar-title"></h2>
+        <ul>
+          <li>
+            <a href="/dashbosrd/dashboard.html"
+              ><i class="bi bi-house"></i>Dashboard</a
+            >
+          </li>
+          <li>
+            <a href="/dashbosrd/newbot.html"
+              ><i class="bi bi-plus-lg"></i>Criar Bot</a
+            >
+          </li>
+          <li>
+            <a href="/dashbosrd/editbot.html"
+              ><i class="bi bi-pen"></i>Editar Bot</a
+            >
+          </li>
+          <li>
+            <a href="/dashbosrd/downsell.html"
+              ><i class="bi bi-download"></i>Downsell</a
+            >
+          </li>
+          <li>
+            <a href="/dashbosrd/mainling.html"
+              ><i class="bi bi-envelope"></i>Mailing</a
+            >
+          </li>
+          <li>
+            <a href="/dashbosrd/payment.html"
+              ><i class="bi bi-wallet2"></i>Pagamentos</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <div class="main-content">
+        <!-- Header -->
+        <header class="header-main">
+          <button class="coin-btn"><i class="bi bi-coin"></i></button>
+          <button class="user-btn">
+            <i class="bi bi-person-circle"></i>
+            <span> Usuário</span>
+          </button>
+          <button class="notify-btn"><i class="bi bi-bell"></i></button>
+        </header>
+
+        <h1>Editar Bot no Telegram</h1>
+        <div class="form-div">
+          <form id="botEditForm" class="bot-form">
+            <h2>Editar Bot</h2>
+            <div class="form-group">
+              <label for="editBotName">Nome do Usuário</label>
+              <input type="text" id="editBotName" name="editBotName" required />
+              <label for="editBotName">Token</label>
+              <input
+                type="text"
+                id="editBotToken"
+                name="editBotName"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="editBotDescription">Mensagem Inicial</label>
+              <textarea
+                id="editBotDescription"
+                name="editBotDescription"
+                required
+              ></textarea>
+            </div>
+
+            <div class="upload-container">
+              <label for="file" class="custom-button">Selecionar Arquivo</label>
+              <input
+                type="file"
+                id="file"
+                class="file-input"
+                onchange="displayFileName()"
+              />
+
+              <br />
+
+              <label for="file-upload" class="custom-file-upload">
+                Escolher Arquivo
+              </label>
+              <input type="file" id="file-upload" />
+              <span id="file-name">Nenhum arquivo selecionado</span>
+            </div>
+
+            <div class="form-group">
+              <label for="editApiKey">Chave API</label>
+              <input type="text" id="editApiKey" name="editApiKey" required />
+              <label for="">ID VIP</label>
+              <input type="text" id="" name="editBotName" required />
+              <label for="">ID REGISTRO</label>
+              <input type="text" id="" name="" required />
+              <p>
+                <a href="/dashbosrd/tutorial-id-chanel.html"
+                  >Clique aqui para acessar o tutorial de como obter o ID de um
+                  Canal/grupo</a
+                >
+              </p>
+              <label for="">link:</label>
+              <input type="text" id="" name="" required />
+              <label for="">Suporte Bot</label>
+              <input type="text" id="" name="" required />
+            </div>
+            <p>
+              Os bots que apresentarem inatividade, foram deletados do Telegram
+              ou tiveram o token alterado serão excluídos automaticamente. Se
+              tiver algum problema, não hesite em chamar nosso suporte!
+            </p>
+
+            <button class="submit-btn">Excluir Bot</button>
+            <button class="submit-btn" type="submit">Salvar Alterações</button>
+          </form>
+        </div>
+      </div>
+      <!-- Footer -->
+    </div>
+
+    <!-- scripts -->
+    <script>
+      function toggleSidebar() {
+        document.getElementById("sidebar").classList.toggle("closed");
+      }
+    </script>
+  </body>
+</html>

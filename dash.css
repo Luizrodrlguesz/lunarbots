@@ -1,0 +1,266 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  background: rgb(0, 0, 0);
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0.829656862745098) 0%,
+    rgba(0, 0, 0, 1) 81%
+  );
+  color: white;
+}
+.dashboard-container {
+  display: flex;
+  width: 100%;
+}
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background: rgb(16, 16, 16);
+  background: linear-gradient(
+    90deg,
+    rgba(16, 16, 16, 1) 0%,
+    rgba(17, 17, 17, 1) 100%
+  );
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  transition: width 0.3s ease;
+  overflow: hidden;
+  z-index: 99;
+}
+
+.sidebar.closed {
+  width: 60px;
+}
+
+.sidebar.closed .sidebar-title {
+  display: none;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.sidebar ul li {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+.sidebar ul li a i {
+  font-size: 20px;
+}
+
+.sidebar ul li a:hover {
+  background-color: #34495e00;
+  border-radius: 5px;
+}
+.sidebar-title {
+  font-size: 20px;
+}
+
+.submenu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: none;
+}
+
+.submenu li {
+  padding-left: 20px;
+}
+
+.submenu li a {
+  font-size: 14px;
+  padding: 8px;
+}
+
+.sidebar.closed ul li a {
+  justify-content: center;
+  position: relative;
+  right: 9px;
+}
+
+.sidebar.closed .text {
+  gap: 20px;
+}
+.sidebar.collapsed {
+  width: 80px;
+  padding: 20px 10px;
+}
+
+.sidebar.collapsed ul li a:hover {
+  padding: 10px;
+}
+
+.sidebar.collapsed ul li a {
+  font-size: 0; /* Esconde o texto */
+}
+
+.sidebar.collapsed ul li a i {
+  font-size: 22px;
+}
+
+.toggle-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  align-self: flex-start;
+}
+.main-content {
+  margin-left: 250px;
+  width: calc(100% - 250px);
+  transition: margin-left 0.3s ease, width 0.3s ease;
+  padding: 20px;
+}
+.sidebar.collapsed ~ .main-content {
+  margin-left: 80px;
+  width: calc(100% - 80px);
+}
+
+.dash-content {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+.dash-content > div {
+  color: azure;
+
+  border-radius: 12px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.dash-content > div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 12px rgba(206, 85, 5, 0.3);
+}
+
+.ballon-1 {
+  background-color: #ffffff;
+  padding: 20px;
+  max-width: fit-content;
+  color: #000 !important;
+}
+.total-investments-stats {
+  width: 900px;
+}
+.ballon-2 {
+  background-color: #ffffff;
+  padding: 20px;
+  max-width: fit-content;
+  color: #000 !important;
+}
+.ballon-3 {
+  background-color: #ffffff;
+  padding: 20px;
+  max-width: fit-content;
+  color: #000 !important;
+}
+.ballon-4 {
+  background-color: #ffffff;
+  padding: 20px;
+  max-width: fit-content;
+  color: #000 !important;
+}
+header {
+  background: transparent;
+  padding: 15px;
+  text-align: center;
+  color: white;
+}
+.header-main {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.coin-btn {
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: none;
+  background-color: #000;
+  color: #ffffff;
+  font-size: 20px;
+}
+.user-btn {
+  display: flex;
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: none;
+  background-color: #000;
+  color: #ffffff;
+  font-size: 20px;
+}
+.user-btn span {
+  margin-left: 5px;
+}
+.notify-btn {
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: none;
+  background-color: #000;
+  color: #ffffff;
+  font-size: 20px;
+}
+footer {
+  background: #000000;
+  padding: 10px;
+  text-align: center;
+  color: white;
+  bottom: 0;
+  width: 100%;
+}
+
+.close {
+  float: right;
+  font-size: 28px;
+  cursor: pointer;
+}
+.sales-history {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.sales-history th,
+.sales-history td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.sales-history th {
+  background-color: #f4f4f4;
+}

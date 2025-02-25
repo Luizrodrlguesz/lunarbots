@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tutorial: Como Obter o ID de um Canal e Grupo no Telegram</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0 auto;
+        padding: 0;
+        background: rgb(1, 1, 1);
+        background: radial-gradient(
+          circle,
+          rgba(8, 8, 8, 0.6083683473389356) 0%,
+          rgba(3, 3, 3, 1) 61%
+        );
+        color: aliceblue;
+        max-width: 1000px;
+      }
+      .main-container {
+        background: rgb(12, 12, 12);
+        background: radial-gradient(
+          circle,
+          rgba(12, 12, 12, 0.6083683473389356) 0%,
+          rgba(12, 12, 12, 1) 81%
+        );
+        margin: 15px 0 5px;
+        border-radius: 10px;
+        transform: translateY(-5px);
+        box-shadow: 0px 6px 12px rgba(255, 255, 255, 0.3);
+      }
+      header {
+        color: white;
+        text-align: center;
+        padding: 20px;
+      }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      h1,
+      h2 {
+        color: #c7c7c7;
+      }
+      h2 {
+        margin-top: 20px;
+        font-size: 1.5rem;
+      }
+      p {
+        font-size: 1rem;
+        color: #b3b3b3;
+        margin-bottom: 15px;
+      }
+      ul {
+        list-style-type: none;
+        padding-left: 0;
+      }
+      ul li {
+        background-color: #16161698;
+        margin-bottom: 10px;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+      }
+      .step {
+        background-color: #3f3f3f0e;
+        padding: 15px;
+        border-radius: 2px;
+      }
+      .highlight {
+        font-weight: bold;
+        color: #d32f2f;
+      }
+      .tutorial-img {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <header>
+        <h1>Tutorial: Como Obter o ID de um Canal e Grupo no Telegram</h1>
+      </header>
+
+      <div class="container">
+        <h2>Como Obter o ID de um Canal no Telegram</h2>
+
+        <div class="step">
+          <h3>Passo 1: Buscar o Bot @getmyid_bot</h3>
+          <ul>
+            <li>
+              Primeiro, busque pelo bot
+              <span class="highlight">@getmyid_bot</span> na barra de pesquisa
+              do Telegram.
+            </li>
+          </ul>
+        </div>
+
+        <div class="step">
+          <img
+            class="tutorial-img"
+            src="/assets/pexels-artempodrez-4884119.jpg"
+            alt=""
+          />
+          <h3>Passo 2: Encaminhar uma Mensagem do Canal</h3>
+          <ul>
+            <li>Abra o canal e pegue qualquer mensagem que esteja lá.</li>
+            <li>
+              Em seguida, encaminhe essa mensagem para o bot
+              <span class="highlight">@getmyid_bot</span>.
+            </li>
+          </ul>
+        </div>
+
+        <div class="step">
+          <img
+            class="tutorial-img"
+            src="/assets/pexels-artempodrez-4884119.jpg"
+            alt=""
+          />
+          <h3>Passo 3: Selecionar o Chat do Bot @getmyid_bot</h3>
+          <ul>
+            <li>
+              Após encaminhar a mensagem, selecione o
+              <span class="highlight">@getmyid_bot</span> como destino da
+              mensagem.
+            </li>
+            <li>
+              Isso fará com que o bot receba a mensagem e envie o ID do canal de
+              volta.
+            </li>
+          </ul>
+        </div>
+
+        <div class="step">
+          <img
+            class="tutorial-img"
+            src="/assets/pexels-artempodrez-4884119.jpg"
+            alt=""
+          />
+          <h3>Passo 4: Enviar a Mensagem para o Bot</h3>
+          <ul>
+            <li>
+              Clique no botão de enviar para encaminhar a mensagem para o bot.
+            </li>
+            <li>O bot então processará e responderá com o ID do canal.</li>
+          </ul>
+        </div>
+
+        <div class="step">
+          <img
+            class="tutorial-img"
+            src="/assets/pexels-artempodrez-4884119.jpg"
+            alt=""
+          />
+          <h3>Passo 5: Receber o ID do Canal</h3>
+          <ul>
+            <li>
+              Depois de enviar a mensagem, o bot responderá com o ID do seu
+              canal.
+            </li>
+            <li>Ele aparecerá na resposta do bot, como mostrado abaixo:</li>
+            <li>
+              <span class="highlight">Forwarded from chat: -1002271015104</span>
+            </li>
+          </ul>
+          <img
+            class="tutorial-img"
+            src="/assets/pexels-artempodrez-4884119.jpg"
+            alt=""
+          />
+        </div>
+
+        <h2>Dicas Importantes</h2>
+        <ul>
+          <li>
+            📌 IDs de canais geralmente começam com
+            <span class="highlight">-100</span>.
+          </li>
+          <li>
+            🔒 Certifique-se de que o bot tenha permissão para enviar mensagens
+            no seu canal.
+          </li>
+          <li>
+            🔄 Para obter o ID de outros canais, repita o processo para cada um
+            deles.
+          </li>
+          <li>
+            ⚙️️ Caso seja um grupo, lembre-se de deixar o histórico do grupo
+            visível! Isso pode ser ajustado na aba de configurações do grupo.
+          </li>
+        </ul>
+
+        <h2>Como Obter o ID de um Grupo no Telegram</h2>
+
+        <div class="step">
+          <h3>Passo 1: Entrar no Grupo e Clicar no Ícone de Editar</h3>
+          <ul>
+            <li>Primeiro, entre no grupo no qual você deseja obter o ID.</li>
+            <li>
+              Clique no ícone de editar, localizado no canto superior direito da
+              tela.
+            </li>
+          </ul>
+          <img
+            class="tutorial-img"
+            src="/assets/pexels-artempodrez-4884119.jpg"
+            alt=""
+          />
+        </div>
+
+        <div class="step">
+          <h3>Passo 2: Clicar em Administradores</h3>
+          <ul>
+            <li>
+              Após clicar no ícone de editar, selecione a opção Administradores
+              no menu de configurações do grupo.
+            </li>
+          </ul>
+          <img
+            class="tutorial-img"
+            src="/assets/pexels-artempodrez-4884119.jpg"
+            alt=""
+          />
+        </div>
+
+        <div class="step">
+          <h3>Passo 3: Adicionar um Administrador</h3>
+          <ul>
+            <li>
+              Agora, clique no ícone de adicionar um administrador para
+              adicionar um novo membro ao grupo com permissões de administrador.
+            </li>
+          </ul>
+          <img
+            class="tutorial-img"
+            src="/assets/pexels-artempodrez-4884119.jpg"
+            alt=""
+          />
+        </div>
+
+        <div class="step">
+          <h3>Passo 4: Buscar o @getmyid_bot</h3>
+          <ul>
+            <li>
+              Na tela de adicionar administrador, busque pelo bot
+              <span class="highlight">@getmyid_bot</span> e selecione-o.
+            </li>
+          </ul>
+          <img
+            class="tutorial-img"
+            src="/assets/pexels-artempodrez-4884119.jpg"
+            alt=""
+          />
+        </div>
+
+        <div class="step">
+          <h3>Passo 5: Adicionar o @getmyid_bot ao Grupo</h3>
+          <ul>
+            <li>
+              Após selecionar o bot, adicione-o ao grupo com as permissões de
+              administrador necessárias.
+            </li>
+            <li>Certifique-se de que o bot tenha as permissões de:</li>
+            <ul>
+              <li>✅ Enviar mensagens</li>
+              <li>✅ Gerenciar mensagens</li>
+              <li>✅ Ver mensagens anteriores</li>
+            </ul>
+          </ul>
+          <img
+            class="tutorial-img"
+            src="/assets/pexels-artempodrez-4884119.jpg"
+            alt=""
+          />
+        </div>
+
+        <div class="step">
+          <h3>Passo 6: Receber o ID do Grupo</h3>
+          <ul>
+            <li>
+              Após adicionar o bot ao grupo, ele enviará automaticamente uma
+              mensagem contendo o ID do grupo.
+            </li>
+            <li>A mensagem será parecida com esta:</li>
+            <li>
+              <span class="highlight">Forwarded from chat: -1002456312807</span>
+            </li>
+          </ul>
+          <img
+            class="tutorial-img"
+            src="/assets/pexels-artempodrez-4884119.jpg"
+            alt=""
+          />
+        </div>
+
+        <h2>Dicas Importantes</h2>
+        <ul>
+          <li>
+            📌 IDs de grupos geralmente começam com
+            <span class="highlight">-100</span>.
+          </li>
+          <li>
+            🔒 Certifique-se de que o bot tenha permissões para enviar mensagens
+            no grupo.
+          </li>
+          <li>
+            🔄 Para obter o ID de outros grupos, repita o processo para cada um
+            deles.
+          </li>
+          <li>
+            ⚙️️ Caso seja um grupo, lembre-se de deixar o histórico do grupo
+            visível! Isso pode ser ajustado na aba de configurações do grupo.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

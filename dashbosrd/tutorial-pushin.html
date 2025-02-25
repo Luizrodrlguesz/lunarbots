@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Tutorial: Como Criar um Bot no Telegram e Obter o Token de Acesso
+    </title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0 auto;
+        padding: 0;
+        background: rgb(1, 1, 1);
+        background: radial-gradient(
+          circle,
+          rgba(8, 8, 8, 0.6083683473389356) 0%,
+          rgba(3, 3, 3, 1) 61%
+        );
+        color: aliceblue;
+        max-width: 1000px;
+      }
+      .main-container {
+        background: rgb(12, 12, 12);
+        background: radial-gradient(
+          circle,
+          rgba(12, 12, 12, 0.6083683473389356) 0%,
+          rgba(12, 12, 12, 1) 81%
+        );
+        margin: 15px 0 5px;
+        border-radius: 10px;
+        transform: translateY(-5px);
+        box-shadow: 0px 6px 12px rgba(255, 255, 255, 0.3);
+      }
+      header {
+        color: white;
+        text-align: center;
+        padding: 20px;
+      }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      h1,
+      h2 {
+        color: #c7c7c7;
+      }
+      h2 {
+        margin-top: 20px;
+        font-size: 1.5rem;
+      }
+      p {
+        font-size: 1rem;
+        color: #b3b3b3;
+        margin-bottom: 15px;
+      }
+      ul {
+        list-style-type: none;
+        padding-left: 0;
+      }
+      ul li {
+        background-color: #16161698;
+        margin-bottom: 10px;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+      }
+      .step {
+        background-color: #3f3f3f0e;
+        padding: 15px;
+        border-radius: 2px;
+      }
+      .highlight {
+        font-weight: bold;
+        color: #d32f2f;
+      }
+      .tutorial-img {
+        width: 100%;
+      }
+      .back-painel {
+        text-decoration: none;
+        color: white;
+      }
+      .tutorial-img {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="container">
+        <h1>Como Obter o Token da Pushin Pay</h1>
+        <p class="step">Passo 1: Criar ou Fazer Login na Pushin Pay</p>
+        <img
+          class="tutorial-img"
+          src="/assets/pexels-artempodrez-4884119.jpg"
+          alt=""
+        />
+        <ol>
+          <li>
+            <strong>Registro na Pushin Pay:</strong> Se você ainda não tem uma
+            conta, acesse o site oficial da PushinPay e preencha o formulário de
+            cadastro.
+          </li>
+          <li>
+            Após o registro, verifique seu e-mail para confirmar sua conta.
+          </li>
+          <li>
+            Se você já possui uma conta, faça login diretamente no site da
+            PushinPay.
+          </li>
+        </ol>
+
+        <p class="step">Passo 2: Gerar o Token de Integração</p>
+        <img
+          class="tutorial-img"
+          src="/assets/pexels-artempodrez-4884119.jpg"
+          alt=""
+        />
+        <ol>
+          <li>
+            <strong>Painel da Pushin Pay após login:</strong> Após acessar o
+            painel da Pushin Pay, clique em "Configurações" no menu lateral.
+          </li>
+          <li>Em "Configurações", selecione a opção "Integração".</li>
+          <img
+            class="tutorial-img"
+            src="/assets/pexels-artempodrez-4884119.jpg"
+            alt=""
+          />
+          <li>
+            Clique no botão "Criar Token" para gerar um novo código de
+            integração.
+          </li>
+          <img
+            class="tutorial-img"
+            src="/assets/pexels-artempodrez-4884119.jpg"
+            alt=""
+          />
+          <li>
+            Marque as caixas de confirmação e clique em "Criar" para gerar seu
+            token.
+          </li>
+          <li>Após clicar em "Criar", o token gerado será exibido na tela.</li>
+          <img
+            class="tutorial-img"
+            src="/assets/pexels-artempodrez-4884119.jpg"
+            alt=""
+          />
+          <li>
+            Copie o token e guarde-o em um local seguro. Você precisará dele
+            para configurar a integração com seu bot.
+          </li>
+        </ol>
+
+        <p class="step">Passo 3: Conectar à Plataforma ApexVips</p>
+        <img
+          class="tutorial-img"
+          src="/assets/pexels-artempodrez-4884119.jpg"
+          alt=""
+        />
+        <ol>
+          <li>
+            <strong>Acesse a página de Meio de Pagamentos da ApexVips:</strong>
+            A página onde você irá inserir seu token.
+          </li>
+          <li>
+            Insira o token gerado no campo indicado e clique em "Conectar".
+          </li>
+          <img
+            class="tutorial-img"
+            src="/assets/pexels-artempodrez-4884119.jpg"
+            alt=""
+          />
+          <li>
+            Após clicar em "Conectar", você verá uma mensagem dizendo que a
+            integração foi concluída com sucesso.
+          </li>
+        </ol>
+
+        <p>✅ Concluído!</p>
+        <p>
+          Parabéns! Você concluiu a configuração do seu token de integração e
+          conectou com sucesso à plataforma ApexVips. Agora seu bot está pronto
+          para gerar pagamentos e gerenciar assinaturas automaticamente.
+        </p>
+
+        <a href="#" class="back-painel">Voltar ao Painel</a>
+      </div>
+    </div>
+  </body>
+</html>
